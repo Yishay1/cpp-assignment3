@@ -8,14 +8,22 @@ Member::Member(){
 and add to another member this to followers list  */
 void Member:: follow(Member &member)
 {
-	following[member.id]=&member;
-	member.followers[id]=this;
+	if(&member != this){
+        	if(following.count(member.id) == 0) { 
+			following[member.id]=&member;
+			member.followers[id]=this;
+		}
+	}
 }
 /*remove the following from 2 lists */
 void Member:: unfollow(Member &member)
 {
-	following.erase(member.id);
-	member.followers.erase(this->id);
+	if(&member != this){
+	        if(this->mapFollowings.count(member.id) == 1) {
+			following.erase(member.id);
+			member.followers.erase(this->id);
+		}
+	}
 }
 /*return how many following after this member*/
 int Member::numFollowers()
