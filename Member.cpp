@@ -19,7 +19,7 @@ void Member:: follow(Member &member)
 void Member:: unfollow(Member &member)
 {
 	if(&member!= this){
-	        if(this->following.count(member.id) == 1) {
+	        if(following.count(member.id) == 1) {
 			following.erase(member.id);
 			member.followers.erase(this->id);
 		}
