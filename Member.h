@@ -4,7 +4,7 @@
 #include<stdlib.h>
 #include<map>
 using namespace std;
-
+/*this class represents a member in a social network*/
 class Member
 {
 private:
@@ -21,4 +21,3 @@ public:
 	void follow(Member &m);
 	void unfollow(Member &m);
 };
-
