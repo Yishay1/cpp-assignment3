@@ -1,3 +1,5 @@
+#ifndef MEMBER_H
+#define MEMBER_H
 #include<iostream>
 #include<string>
 #include<vector>
@@ -21,3 +23,4 @@ public:
 	void follow(Member &m);
 	void unfollow(Member &m);
 };
+#endif
